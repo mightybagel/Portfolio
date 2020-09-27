@@ -1,0 +1,130 @@
+body{
+    margin: 0%;
+}
+*{
+    box-sizing: border-box;
+}
+/*Navbar*/
+.myNavbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(15, 15, 15, 0.925);
+}
+.myNavbar a {
+   float: left;
+   display: block;
+   color: white;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 20px;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+} 
+.myNavbar a:hover{
+    background-color: gray;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.myNavbar a.active {
+    background-color: darkgray;
+}
+#Typing_Video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: 100%;
+}
+.Video_Text {
+    background: rgba(0, 0, 0, 0.925);
+    padding: 15px;
+    color: white;
+    width: 100%;
+    margin-top: 23%;
+}
+.Column_1{
+    width: 50%;
+    float: left;
+    height: 400px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.Column_2{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 400px;
+    background-color: #4d4d4d;
+    overflow: hidden;
+    text-align: center;
+
+}
+.Row::after, .Row::before{
+    content:"";
+    display: table;
+    clear: both;
+}
+img {
+    filter: grayscale(75%);
+    border-radius: 8px;
+    width: 311px;
+    height: 380px;
+    vertical-align: middle;
+    object-fit: contain;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: 0 4px 8px 0 rgba(214, 212, 212, 0.2), 0 6px 20px 0 rgba(214, 212, 212, 0.3);
+}
+img:hover{
+    /*transition: transform;/* short hand of: transition-property: all; transition-property: transform;}*/
+    box-shadow: 0 4px 8px 0 rgba(67, 47, 141, 0.24), 0 6px 20px 0 rgba(67, 47, 141, 0.5);
+   
+}   
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 3%;
+    color: rgb(1, 44, 1);
+    font-weight: normal;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+h1:hover{
+    font-weight: bold;
+    color: darkslategray;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2.5px;
+    text-align: justify;
+    padding: 0px 20px;
+    font-stretch: expanded;
+    text-align: center;
+}
+p:hover{
+    transition: transform 1s;
+    transform: scale(1.01);
+    color: dimgrey;
+}
+/* Form elememt */
+form { 
+	border-radius: 5px; 
+	background-color: #f2f2f2;
+	padding: 20px;
+	font-family: Georgia, 'Times New Roman', Times, serif
+}
+.label-left-text{
+    display: block;
+    text-align: left;
+}
+footer {
+	padding: 2%;
+	background-color:white;
+}
