@@ -4,15 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do's portfolio</title>
     <link rel="stylesheet" href="./Stylesheet/Ngan_Portfolio.css">
+    <script src="JavaScript/Ngan_Portfolio.js" defer></script>
+    
 </head>
-<body class="Background">
+<body onload="currentSlide(1)"class="Background">
     <!--Nav bar-->
     <div class="myNavbar">
+        <div class="a_link">
             <a class="active" href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#Github">Github</a>
             <a href="#Contact">Contact</a>
-    </div>  
+        </div>  
+    </div>
+           
     <!--Nav bar-->
 
     <!--Home-->
@@ -40,6 +45,41 @@
     <!--Video text-->
     <!--Home-->
 
+    <!--Slideshow-->
+    <!--This contains the slides-->
+    <div class="myContainer">
+        <div class="Image_Container">
+            <img class="Image" src="Stylesheet/Images/HTML.png">
+            <div class="Caption">I am trained in HTML</div>
+        </div>
+        <div class="Image_Container">
+            <img class="Image" src="Stylesheet/Images/CSS.png">
+            <div class="Caption">CSS</div>
+        </div>
+        <div class="Image_Container">
+            <img class="Image" src="Stylesheet/Images/JavaScript.png">
+            <div class="Caption">JavaScript.</div>
+        </div>
+        <div class="Image_Container">
+            <img class="Image" src="Stylesheet/Images/contact.jpg">
+            <div class="Caption">Contact me</div>
+        </div>
+    <!--Next and Previous arrows-->
+       
+        <span class="Previous" onclick="plusSlide(-1)">&#10092;</span>
+        <span class="Next" onclick="plusSlide(1)">&#10093;</span></br>
+    </div>
+    <!--Circles under pictures-->
+    <div class="dots">
+        <div class="Circle" onclick="currentSlide(1)"></div>
+        <div class="Circle" onclick="currentSlide(2)"></div>
+        <div class="Circle" onclick="currentSlide(3)"></div>
+        <div class="Circle" onclick="currentSlide(4)"></div>
+    </div>
+        
+    
+    <!--Slideshow-->
+
     <!--About section-->
     <div class="Row" id="About"> 
 		<div class="Column_2"> <!-- Left column -->
@@ -47,10 +87,10 @@
 		</div>
   
 		<div class="Column_1"> <!-- Right column -->
-            <h1>About</h1>
+            <h1 style="margin-top: 2%">About</h1>
             <p>
-                I love traveling. My family and I went to different places during summers and I adore the time I spent with them. I also enjoy tasting good food, watching TV shows and movies. Finally, I believe in “Stay positive and don’t give up”. I possibly saw that in a mug somewhere. </br></br>
-                Roy T.Bennett once said “Don’t  be pushed around by the fears in your mind. Be led by the dreams in your heart”. My dream is becoming a software developer. With that determination, I have attended The Tech Academy and trained in full stack programming language: HTML, CSS, JavaScript.</br></br>
+                I love traveling. My family and I went to different places during summers and I adore the time I spent with them. I also enjoy tasting good food, watching TV shows and movies. Finally, I believe in “Stay positive and don’t give up”. I possibly saw that in a mug somewhere. </br>
+                Roy T.Bennett once said “Don’t  be pushed around by the fears in your mind. Be led by the dreams in your heart”. My dream is becoming a software developer. With that determination, I have attended The Tech Academy and trained in full stack programming language: HTML, CSS, JavaScript.</br>
                 I would love to have an opportunity to work with you. 
                 Please <a href="#Contact">contact </a>me. 
             </p>	
@@ -70,10 +110,36 @@
         </div>
     </div>
     <!--Github-->
- 
+
+    <!--Popup Form-->
+    <button class="Contact_Button" onclick="Open_Form()">Contact</button>
+    <div id="Form_Container" class="Popup_Form">
+        <form action=""><!--Action says where to send the form-->
+            <div class="form-group">
+                <label for="exampleInputMessage" class="label-left-text">Name</label>
+                <input type="name" class="form-control" id="exampleInputName" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="label-left-text">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                <small id="emailHelp" class="form-text text-muted label-left-text">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputMessage" class="label-left-text">Message</label>
+                <input type="message" class="form-control" id="exampleInputMessage" required>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="Close_Form()">Close</button>
+        </form>
+    </div>
+    
+     <!--Popup Form-->
+
     <!--Contact-->
+<!---------------------------------------------------------------------------------------------------
     <div class="Row" id="Contact">
         <div class="Column_2"><!--Left column-->    
+<!--
             <img src="./Stylesheet/Images/Phone.jpg" alt="Phone image" style="background-color: white">
         </div>
         <div class="Column_1">
@@ -94,15 +160,18 @@
                 <button type="button" class="btn btn-secondary btn-sm">Submit</button>
               </form>
         </div>
-    </div>
+    </div> 
+-------------------------------------------------------------------------------------------------------------->
     
+
 
     <!--Footer-->
     <footer>
-        <p style="text-align: center;">&copy; N.D., <a href="https://mightybagel.github.io/Portfolio/">My Portfolio</a></p></br>
+        <p style="text-align: center;">&copy; N.D., <a href="https://github.com/mightybagel/">My Github</a></p></br>
     </footer>
     <!--Footer-->
     <!--Link to bootstraps 4-->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </body>
 </html>
