@@ -124,7 +124,7 @@ h1{
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 3%;
-    color: rgb(1, 44, 1);
+    color: rgb(0, 128, 43);
     font-weight: normal;
     padding-top: 0px;
     margin-top: 0px;
@@ -132,6 +132,14 @@ h1{
 h1:hover{
     font-weight: bold;
     color: darkslategray;
+}
+
+div#MyProjects div h1{
+    color: rgb(0, 128, 43);
+}
+div#MyProjects div h1:hover{
+    font-weight: bold;
+    color: white;
 }
 p{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -145,6 +153,10 @@ p:hover{
     transition: transform 1s;
     transform: scale(1.01);
     color: dimgrey;
+}
+.no_bullet{
+	list-style-type: none;
+	margin: 150px;
 }
 /* Form elememt */
 form { 
